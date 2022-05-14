@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Koulen&family=Lato:wght@100&family=Montserrat:wght@100&family=Raleway:wght@100&family=Rubik:wght@300&display=swap');
+/* font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Koulen', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rubik', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.mainPage{
+    font-size: 30px;
+    font-family: 'Koulen', cursive;
+}
+
+.landingPage{
+    height: 20rem;
+    background-image: linear-gradient(to right,rgba(255, 72, 0, 0.404),rgba(2, 2, 2, 0.408)) ,url('../img/PetHome.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.title{
+    padding-top: 4%;
+    color: rgba(255, 230, 220, 0.713);
+}
+.productos{
+    border: 10px solid ;
+}
