@@ -20,16 +20,23 @@
                 <h1 class="title">Inicio</h1>
             </div>
 
-            <div class="col-md-3"><p>hola</p></div>
+            <div class="col-md-3 navList">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Todos los productos</li>
+                    <li class="list-group-item">Productos destacados</li>
+                    <li class="list-group-item">Productos para gatos</li>
+                    <li class="list-group-item">Productos para perros</li>
+                </ul>
+            </div>
 
             <div class="col-md-6 productos">
                 <h1>Productos destacados</h1>
 
-                <div id="listaProducts"></div>
-                
+                <div class="row" id="listaProducts"></div>  
             </div>
+            
 
-            <div class="col-md-3">
+            <div class="col-md-3 lateral">
                 <nav class="navbar navbar-light bg-light">
                     <div class="container-fluid">
                       <form class="d-flex">
@@ -51,6 +58,7 @@
     </script>
 
     <!-- MIS SCRIPTS  -->
+    <script src="./scripts/datos/products.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 

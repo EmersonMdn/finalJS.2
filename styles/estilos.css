@@ -10,21 +10,59 @@ font-family: 'Rubik', sans-serif; */
     padding: 0;
     margin: 0;
 }
-.mainPage{
-    font-size: 30px;
-    font-family: 'Koulen', cursive;
-}
-
 .landingPage{
     height: 20rem;
     background-image: linear-gradient(to right,rgba(255, 72, 0, 0.404),rgba(2, 2, 2, 0.408)) ,url('../img/PetHome.jpg');
     background-size: cover;
     background-position: center;
 }
-.title{
-    padding-top: 4%;
-    color: rgba(255, 230, 220, 0.713);
+
+.navList{
+    background-color: rgb(227, 226, 226);
+    padding-top: 12px;
 }
+
+.lateral{
+    background-color: rgb(227, 226, 226);
+    padding-top: 12px;
+}
+
+.productos h1{
+    color: rgb(56, 50, 50);
+    text-decoration: underline;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+}
+
 .productos{
-    border: 10px solid ;
+    padding-top: 12px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.post_productos{
+    text-align: center;
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+    padding-bottom: 10px;
+}
+.post_productos div{
+    height: 420px;
+    overflow: hidden;
+}
+.post_productos img{
+    height: 300px;
+    object-fit: cover;
+}
+.post_productos div:hover{
+    box-shadow: aqua 1px 2px 9px 2px;
+}
+.btn-comprar{
+    background-color: rgb(54, 172, 250);
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 5px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    display: inline-block;
 }
