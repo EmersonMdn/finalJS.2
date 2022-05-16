@@ -1,5 +1,5 @@
 const comidas = [{
-        id: 0,
+        id: 00,
         animal: "perro",
         nombre: "Alimento Dog Chow Salud Visible Sin Colorantes para perro adulto de raza mini y pequeña sabor mix en bolsa de 21 kg",
         marca: "Dog Chow",
