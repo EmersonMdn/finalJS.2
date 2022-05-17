@@ -8,13 +8,14 @@
     <!-- INCORPORANDO BOOTSTRAP  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- MIS ESTILOS  -->
     <link rel="stylesheet" href="./styles/estilos.css">
     <title>Inicio | PetStore</title>
 </head>
 
 <body>
-    <div class="container-fluid mainPage">
+    <div class="container-fluid mainPage" id="mainPage">
         <div class="row">
             <!-- <div class="col-md-12 landingPage">
                 <h1 class="title">Inicio</h1>
@@ -51,11 +52,36 @@
                 <div class="row" id="listaProducts"></div>  
             </div>
             
-
             <div class="col-md-3 lateral">
                 <div id="lista-carrito" class="oculto"></div>
             </div>
         </div>
+    </div>
+    <div class="container oculto" id="cartPage">
+        <div id="volver">
+            <p><i class="fa-solid fa-arrow-left-long volver"></i> volver</p>
+        </div>
+        
+        <h1>Carro de compras</h1>
+        <hr class="my-4">
+
+        <div id="carritoFinal"></div>
+
+        
+        <div class="metodos">
+            <h4>Metodos de pago</h4>
+            <ul>
+                <li> Targetas de credito/debito</li>
+                <li>Mercado Pago (hasta 12 cuotas  sin interés)</li>
+                <li>Efectivo (RapiPago, Pago Facil, etc...)</li>
+            </ul>
+        </div>
+        
+        <h5 class="text-danger"> Evento exclusivo para mayores de 18 años</h5>
+        <p>⚠️Deben presentarse con pase sanitario sin excepción⚠️</p>
+        <p>➡️ PROMO CUMPLE! 🥳 Si cumplís años ingresas FREE presentando DNI en puerta hasta las 2am, por fila de anticipadas! <br> <br> Evento para +18 años, con DNI sin excepción. Ingreso con Anticipada de 1 a 2.30am. Entradas en puerta hasta agotar capacidad.</p>
+        <small>Los comentarios y/o textos ingresados son de exclusiva responsabilidad del Productor y/o Organizador del Evento. TicketsOn no se hace responsable por declaraciones emitidas por estos en lo relativo a los Eventos. El Productor/Organizador es el único y exclusivo responsable de la producción y organización del Evento, en forma oportuna y en conformidad a la ley. </small>
+    
     </div>
 
     <!-- INCORPORANDO BOOTSTRAP -->

@@ -71,6 +71,8 @@ const addCart = (idProducto) => {
         title: 'Agregado al carro'
       })
     
+    localStorage.setItem('cart', JSON.stringify(carrito));
+
     imprimirCarro(carrito);
 }
 
@@ -88,7 +90,6 @@ const imprimirCarro = (array) =>{
     producto.innerHTML = `<table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">Cantidad</th>
                             <th scope="col">Producto</th>
                             <th scope="col">Precio</th>
                         </tr>
@@ -96,18 +97,105 @@ const imprimirCarro = (array) =>{
                         <tbody id='bodyTable'>  
                         </tbody>
                     </table>
-                    <p>Precio final: $${precioFinal}</p>`;
+                    <p>Precio final: $${precioFinal}</p>
+                    <button id='vaciarBtn' class="btn btn-outline-dark" type="button">Vacíar carrito</button>
+                    <button id='comprarBtn' class="btn btn-outline-dark" type="button">Completar compra</button>`;
 
     lista.append(producto);
+
+    let vaciarCarro = document.getElementById('vaciarBtn');
+    vaciarCarro.addEventListener('click', () => vaciarCarrito());
+    
+
+    let finalizarCompra = document.getElementById('comprarBtn');
+    finalizarCompra.addEventListener('click', () => comprar());
+
+
 
     let listaTable = document.getElementById('bodyTable');
 
     array.forEach(element => {
         let datos = document.createElement('tr')
-        datos.innerHTML= `  <td>${element.cantidad}</td>
-                            <td>${element.marca}</td>
+        datos.innerHTML= `  <td>x${element.cantidad} ${element.marca}</td>
                             <td>$${element.precioTotal}</td>`;
 
         listaTable.append(datos);
     });
+}
+
+const vaciarCarrito = () => {
+    let lista = document.getElementById('lista-carrito');
+    Swal.fire({
+        title: 'Seguro?',
+        text: "Se vaciara el carro",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, continuar...'
+      }).then((result) => {
+        if (result.isConfirmed) {
+
+            lista.innerHTML='';
+            carrito = [];
+            localStorage.removeItem('cart')
+            Swal.fire(
+                'Listo!',
+                'Se ha borrado todo',
+                'success'
+            )
+        }
+      })
+}
+
+const comprar = () =>{
+    let carroPagar = document.getElementById('carritoFinal');
+    document.getElementById('cartPage').className = 'container';
+    document.getElementById('mainPage').className = 'oculto';
+    
+    imprimirTodo(carrito);
+}
+
+const imprimirTodo = (array) => {
+    let lista = document.getElementById('carritoFinal');
+    lista.innerHTML = '';
+
+    let div = document.createElement('div');
+
+    div.innerHTML = `<table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                        </thead>
+                        <tbody id='bodyTablet'>
+                        
+                        </tbody>
+                    </table>`;
+    lista.append(div);
+
+    let listaTable = document.getElementById('bodyTablet');
+
+    array.forEach(element => {
+        let datos = document.createElement('tr')
+        datos.innerHTML= `  <td>x${element.cantidad} ${element.marca}</td>
+                            <td>$${element.precioTotal}</td>
+                            `;
+
+        listaTable.append(datos);
+    });
+
+    let precioFinal = obtenerPrecioTotal(carrito);
+    let total = document.createElement('tr');
+    total.innerHTML = `
+                        <td>TOTAL A PAGAR</td>
+                        <td>$ ${precioFinal}</td>`
+    
+                        listaTable.append(total);
+}
+
+document.getElementById('volver').onclick = () =>{
+    document.getElementById('mainPage').className = 'container-fluid mainPage';
+    document.getElementById('cartPage').className = 'oculto'
 }

@@ -33,9 +33,9 @@ font-family: 'Rubik', sans-serif; */
 
 .productos h1{
     color: rgb(56, 50, 50);
-    text-decoration: underline;
     font-family: 'Rubik', sans-serif;
     font-weight: bolder;
+    letter-spacing: 7px; 
 }
 
 .productos{
@@ -59,10 +59,12 @@ font-family: 'Rubik', sans-serif; */
     width: 100%;
     object-fit: cover;
 }
+
 .post_productos h6{
     height: 70px;
     overflow:hidden;
 }
+
 .post_productos div:hover{
     transition: 0.82s;
     box-shadow: rgb(107, 108, 108) 0px 1px 10px 3px;
@@ -75,6 +77,11 @@ font-family: 'Rubik', sans-serif; */
     font-family: 'Rubik', sans-serif;
     cursor: pointer;
     display: inline-block;
+}
+.btn-comprar:hover{
+    background-color: rgb(8, 218, 255);
+    transform:  scale(1.1);
+    border: 2px rgb(22, 253, 234) solid;
 }
 .navFilters li{
     list-style: none;
@@ -102,4 +109,45 @@ font-family: 'Rubik', sans-serif; */
     border: 2px solid rgba(88, 88, 88, 0.391);
     border-radius: 19px;
     background-color: #fff;
+}
+
+#lista-carrito{
+    position:fixed;
+}
+
+@media screen and (min-width: 320px) and (max-width: 560px) {
+    #lista-carrito{
+        position:static;
+    }
+    .btn-comprar{
+        background-color: rgb(54, 172, 250);
+        border-radius: 8px;
+        padding: 25px 0;
+        display: block;
+    }
+}
+
+#carritoFinal{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+#cartPage{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+#volver{
+    font-size: 25px;
+}
+#volver p{
+    display: inline;
+    border-radius: 10px;
+    background-color: rgb(192, 191, 191);
+    padding:0 10px;
+}
+#volver p:hover{
+    border-radius: 10px;
+    background-color: rgb(192, 191, 191);
+    padding:0 1% ;
+    cursor: pointer;
 }
