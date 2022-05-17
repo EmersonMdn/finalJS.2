@@ -24,7 +24,9 @@ class Producto{
 const productos = document.getElementById('listaProducts');
 let carrito = [];
 
-for (const comida of comidas) {
+let todoProducts = comidas.concat(juguetes);
+
+for (const comida of todoProducts) {
     let post = document.createElement('div');
     post.className = 'col-12 col-sm-6 col-md-4 col-lg-3 post_productos'
     post.innerHTML =`<div id='${comida.id}'>  
@@ -59,11 +61,7 @@ const addCart = (idProducto) => {
         position: 'bottom-end',
         showConfirmButton: false,
         timer: 1400,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
+        timerProgressBar: true
       })
       
       Toast.fire({

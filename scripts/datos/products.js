@@ -71,4 +71,14 @@ const juguetes = [{
         imagen: 'https://http2.mlstatic.com/D_NQ_NP_887074-MLA47325379872_092021-V.webp',
         precio: 1299
     },
+    {
+        nombre: 'Rascador de gatos',
+        imagen: 'https://centropet.com/wp-content/uploads/2020/08/sd.png',
+        precio: 6499
+    },
+    {
+        nombre: 'Pelota para perros',
+        imagen: 'https://centropet.com/wp-content/uploads/2021/07/D_716378-MLA44240508223_122020-F.jpg',
+        precio: 6499
+    },
 ]

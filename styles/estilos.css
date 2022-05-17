@@ -6,6 +6,11 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Rubik', sans-serif; */
 
+:root {
+    --btn-primary: rgb(246, 131, 0);
+    --btn-hover: rgb(253, 172, 20);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -46,31 +51,31 @@ font-family: 'Rubik', sans-serif; */
 
 .post_productos{
     text-align: center;
-
     font-family: 'Rubik', sans-serif;
     padding-bottom: 10px;
 }
 .post_productos div{
-    overflow: hidden;
     padding: 10px;
+    border: 2px solid rgba(9, 9, 9, 0.076);
 }
 .post_productos img{
-
+    height: 200px;
     width: 100%;
-    object-fit: cover;
+    object-fit:contain;
 }
 
 .post_productos h6{
-    height: 70px;
+    height: 42px;
     overflow:hidden;
 }
 
 .post_productos div:hover{
+    transform: scale(1.1);
     transition: 0.82s;
     box-shadow: rgb(107, 108, 108) 0px 1px 10px 3px;
 }
 .btn-comprar{
-    background-color: rgb(54, 172, 250);
+    background-color: var(--btn-primary);
     color: aliceblue;
     border-radius: 8px;
     padding: 5px;
@@ -79,9 +84,8 @@ font-family: 'Rubik', sans-serif; */
     display: inline-block;
 }
 .btn-comprar:hover{
-    background-color: rgb(8, 218, 255);
+    background-color: var(--btn-hover);
     transform:  scale(1.1);
-    border: 2px rgb(22, 253, 234) solid;
 }
 .navFilters li{
     list-style: none;
@@ -115,15 +119,39 @@ font-family: 'Rubik', sans-serif; */
     position:fixed;
 }
 
-@media screen and (min-width: 320px) and (max-width: 560px) {
+@media screen and (min-width: 300px) and (max-width: 575px) {
     #lista-carrito{
         position:static;
+        padding-bottom: 5%;
     }
     .btn-comprar{
         background-color: rgb(54, 172, 250);
         border-radius: 8px;
         padding: 25px 0;
         display: block;
+    }
+    .post_productos{
+        padding: 1% 10%;
+    }
+    .post_productos img{
+        height: 200px;
+        object-fit:contain;
+    }
+    .btn-comprar:hover{
+        background-color: rgb(54, 172, 250);
+        transform:  scale(1);
+        border: 0px rgb(243, 243, 243) solid;
+    }
+    .btn-comprar:active{
+        background-color: rgb(8, 218, 255);
+    }
+    .post_productos div:hover{
+        box-shadow: rgb(255, 255, 255) 0px 1px 10px 3px;
+    }
+    .veterinario{
+        background-size:contain;
+        background-repeat:repeat;
+        background-position: 20px 0px;
     }
 }
 
@@ -150,4 +178,35 @@ font-family: 'Rubik', sans-serif; */
     background-color: rgb(192, 191, 191);
     padding:0 1% ;
     cursor: pointer;
+}
+.veterinario{
+    min-height: 190px;
+    background-image:url('https://images.unsplash.com/photo-1577175889968-f551f5944abd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 0 -90px ;
+    text-align: right;
+    font-family: 'Rubik', sans-serif; 
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    
+}
+
+.bannerVet{
+    background-color: rgba(4, 4, 4, 0.519);
+    display: inline-block;
+    padding:2% 1% 2% 1%;
+    margin-top: 6%;
+}
+.bannerVet a{
+    text-decoration: none;
+    color: rgb(254, 232, 109);
+}
+
+#turnoVet{
+    background-color: var(--btn-primary);
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
 }

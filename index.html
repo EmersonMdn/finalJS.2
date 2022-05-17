@@ -22,31 +22,41 @@
             </div> -->
 
             <div class="col-md-3 navList">
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="navBurger-in p-4">
-                        <ul class="navFilters">
-                                <li class="nav-item ">Todos los productos</li>
-                                <li class="nav-item ">Productos destacados</li>
-                                <li class="nav-item ">Productos para gatos</li>
-                                <li class="nav-item ">Productos para perros</li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar en la tienda" aria-label="Search">
-                            <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                          </form>
-                    </div>
-                  </div>
-                  <nav class="navbar navbar-light navBurger">
-                    <div class="container-fluid">
-                        <span>Ver más productos </span>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                    </div>
-                  </nav>
+                
             </div>
 
             <div class="col-md-6 productos">
+                <div>
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="navBurger-in p-4">
+                            <ul class="navFilters">
+                                    <li class="nav-item ">Todos los productos</li>
+                                    <li class="nav-item ">Productos destacados</li>
+                                    <li class="nav-item ">Productos para gatos</li>
+                                    <li class="nav-item ">Productos para perros</li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Buscar en la tienda" aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                              </form>
+                        </div>
+                      </div>
+                      <nav class="navbar navbar-light navBurger">
+                        <div class="container-fluid">
+                            <span>Ver más productos </span>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="veterinario" id="veterinario">
+                    <div class="bannerVet">
+                        <h4>Necesitas una consulta con un veterinario?</h4>
+                        <p>Saca turno para una consulta <a href="#">acá</a></p>
+                        <a id="turnoVet" href="#">Saca un turno</a>
+                    </div>
+                </div>
                 <h1>Productos destacados</h1>
 
                 <div class="row" id="listaProducts"></div>  
@@ -97,6 +107,8 @@
 
     <!-- MIS SCRIPTS  -->
     <script src="./scripts/datos/products.js"></script>
+    <script src="./scripts/elementos.js"></script>
+    <script src="./scripts/datos.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 
