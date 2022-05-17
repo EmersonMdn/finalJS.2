@@ -22,33 +22,10 @@
             </div> -->
 
             <div class="col-md-1 navList">
-                
+
             </div>
 
             <div class="col-md-8 productos">
-                <div>
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="navBurger-in p-4">
-                            <ul class="navFilters">
-                                    <li class="nav-item" id="items-todo">Todos los productos</li>
-                                    <li class="nav-item" id="items-gatos">Productos para gatos</li>
-                                    <li class="nav-item" id="items-perros">Productos para perros</li>
-                            </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Buscar en la tienda" aria-label="Search">
-                                <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                              </form>
-                        </div>
-                      </div>
-                      <nav class="navbar navbar-light navBurger">
-                        <div class="container-fluid">
-                            <span>Ver más productos </span>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                        </div>
-                    </nav>
-                </div>
                 <div class="veterinario" id="veterinario">
                     <div class="bannerVet">
                         <h4>Necesitas una consulta con un veterinario?</h4>
@@ -56,11 +33,40 @@
                         <a id="turnoVet" href="#">Saca un turno</a>
                     </div>
                 </div>
-                <h1>Productos destacados</h1>
 
-                <div class="row" id="listaProducts"></div>  
+                <h1>Productos</h1>
+
+                <div>
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="navBurger-in p-4">
+                            <ul class="navFilters">
+                                <li class="nav-item" id="items-todo">Todos los productos</li>
+                                <li class="nav-item" id="items-gatos">Productos para gatos</li>
+                                <li class="nav-item" id="items-perros">Productos para perros</li>
+                            </ul>
+                            <form class="d-flex">
+                                <input id="buscarProductoValue" class="form-control me-2" type="search"
+                                    placeholder="Buscar en la tienda" aria-label="Search">
+                                <button id="buscarProductoBtn" class="btn btn-outline-dark"
+                                    type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-light navBurger">
+                        <div class="container-fluid filters">
+                            <span>Ver más productos </span>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarToggleExternalContent"
+                                aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row" id="listaProducts"></div>
             </div>
-            
+
             <div class="col-md-3 lateral">
                 <div id="lista-carrito" class="oculto"></div>
             </div>
@@ -70,23 +76,23 @@
         <div id="volver">
             <p><i class="fa-solid fa-arrow-left-long volver"></i> volver</p>
         </div>
-        
+
         <h1>Carro de compras</h1>
         <hr class="my-4">
 
         <div id="carritoFinal"></div>
 
-        
+
         <div class="metodos">
             <h4>Metodos de pago</h4>
             <ul>
                 <li> Targetas de credito/debito</li>
-                <li>Mercado Pago (hasta 12 cuotas  sin interés)</li>
+                <li>Mercado Pago (hasta 12 cuotas sin interés)</li>
                 <li>Efectivo (RapiPago, Pago Facil, etc...)</li>
             </ul>
         </div>
-        
-    
+
+
     </div>
 
     <!-- INCORPORANDO BOOTSTRAP -->
@@ -103,7 +109,8 @@
     <!-- MIS SCRIPTS  -->
     <script src="./scripts/datos/products.js"></script>
     <script src="./scripts/elementos.js"></script>
-    <script src="./scripts/datos.js"></script>
+    <script src="./scripts/dom.js"></script>
+    <script src="./scripts/storage.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 

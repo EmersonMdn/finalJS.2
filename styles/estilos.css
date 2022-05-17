@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Koulen&family=Lato:wght@100&family=Montserrat:wght@100&family=Raleway:wght@100&family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Koulen&family=Lato:wght@100&family=Montserrat:wght@100&family=Raleway:wght@100&family=Rubik:wght@300&display=swap");
 /* font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Koulen', cursive;
 font-family: 'Lato', sans-serif;
@@ -7,232 +7,250 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Rubik', sans-serif; */
 
 :root {
-    --btn-primary: rgb(246, 131, 0);
-    --btn-hover: rgb(253, 172, 20);
+  --btn-primary: rgb(246, 131, 0);
+  --btn-hover: rgb(253, 172, 20);
 }
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.oculto{
-    display: none;
-}
-
-.landingPage{
-    height: 20rem;
-    background-image: linear-gradient(to right,rgba(255, 72, 0, 0.404),rgba(2, 2, 2, 0.408)) ,url('../img/PetHome.jpg');
-    background-size: cover;
-    background-position: center;
+.oculto {
+  display: none;
 }
 
-.navList{
-    background-color: rgb(227, 226, 226);
-    padding-top: 12px;
+.landingPage {
+  height: 20rem;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 72, 0, 0.404),
+      rgba(2, 2, 2, 0.408)
+    ),
+    url("../img/PetHome.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.lateral{
-    background-color: rgb(227, 226, 226);
-    padding-top: 12px;
+.navList {
+  background-color: rgb(227, 226, 226);
+  padding-top: 12px;
 }
 
-.productos h1{
-    color: rgb(56, 50, 50);
-    font-family: 'Rubik', sans-serif;
-    font-weight: bolder;
-    letter-spacing: 7px; 
+.lateral {
+  background-color: rgb(227, 226, 226);
+  padding-top: 12px;
 }
 
-.productos{
-    padding-bottom: 30px;
-    text-align: center;
+.productos h1 {
+  color: rgb(56, 50, 50);
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 7px;
 }
 
-.post_productos{
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    padding-bottom: 10px;
-}
-.post_productos div{
-    padding: 10px;
-    border: 2px solid rgba(9, 9, 9, 0.076);
-}
-.post_productos img{
-    height: 200px;
-    width: 100%;
-    object-fit:contain;
+.productos {
+  padding-bottom: 30px;
+  text-align: center;
 }
 
-.post_productos h6{
-    height: 42px;
-    overflow:hidden;
+.post_productos {
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  padding: 10px;
+}
+.post_productos div {
+  padding: 10px;
+  border: 2px solid rgba(9, 9, 9, 0.076);
+}
+.post_productos img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
 }
 
-.post_productos div:hover{
-    transform: scale(1.1);
-    transition: 0.82s;
-    box-shadow: rgb(107, 108, 108) 0px 1px 10px 3px;
-}
-.btn-comprar{
-    background-color: var(--btn-primary);
-    color: aliceblue;
-    border-radius: 8px;
-    padding: 5px;
-    font-family: 'Rubik', sans-serif;
-    cursor: pointer;
-    display: inline-block;
-}
-.btn-comprar:hover{
-    background-color: var(--btn-hover);
-    transform:  scale(1.1);
-}
-.navFilters li{
-    list-style: none;
-    cursor: pointer;
-}
-.navFilters li:hover{
-    color: rgb(107, 107, 107);
-    transition: 0.2s;
-}
-.navFilters{
-    text-align: left;
-    padding: 0ch;
-    line-height: 30px;
-}
-.navBurger{
-    background-color: rgb(227, 226, 226);
-    border-top: 1px rgba(0, 0, 0, 0.273) solid;
-}
-.navBurger-in{
-    background-color: rgb(227, 226, 226);
-}
-.tabla-carrito{
-    padding: 10px;
-    border: 2px solid rgba(88, 88, 88, 0.391);
-    border-radius: 19px;
-    background-color: #fff;
+.post_productos h6 {
+  height: 42px;
+  overflow: hidden;
 }
 
-#lista-carrito{
-    position:fixed;
+.post_productos div:hover {
+  transform: scale(1.1);
+  transition: 0.82s;
+  box-shadow: rgb(107, 108, 108) 0px 1px 10px 3px;
+}
+.btn-comprar {
+  background-color: var(--btn-primary);
+  color: aliceblue;
+  border-radius: 8px;
+  padding: 5px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-comprar:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.1);
+}
+.navFilters li {
+  list-style: none;
+  cursor: pointer;
+}
+.navFilters li:hover {
+  color: rgb(107, 107, 107);
+  transition: 0.2s;
+}
+.navFilters {
+  text-align: left;
+  padding: 0ch;
+  line-height: 30px;
+}
+.navBurger-in {
+  background-color: rgba(121, 116, 116, 0.158);
+}
+.filters {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: flex-start !important;
+}
+.filters span {
+  padding: 0 2% 0 0;
+}
+.tabla-carrito {
+  padding: 10px;
+  border: 2px solid rgba(88, 88, 88, 0.391);
+  border-radius: 19px;
+  background-color: #fff;
+}
+
+#lista-carrito {
+  position: fixed;
 }
 
 @media screen and (min-width: 300px) and (max-width: 575px) {
-    #lista-carrito{
-        position:static;
-        padding-bottom: 5%;
-    }
-    .btn-comprar{
-        background-color: rgb(54, 172, 250);
-        border-radius: 8px;
-        padding: 25px 0;
-        display: block;
-    }
-    .post_productos{
-        padding: 1% 10%;
-    }
-    .post_productos img{
-        height: 200px;
-        object-fit:contain;
-    }
-    .btn-comprar:hover{
-        background-color: rgb(54, 172, 250);
-        transform:  scale(1);
-        border: 0px rgb(243, 243, 243) solid;
-    }
-    .btn-comprar:active{
-        background-color: rgb(8, 218, 255);
-    }
-    .post_productos div:hover{
-        box-shadow: rgb(255, 255, 255) 0px 1px 10px 3px;
-    }
-    .veterinario{
-        background-size:contain;
-        background-repeat:repeat;
-        background-position: 20px 0px;
-    }
+  #lista-carrito {
+    position: static;
+    padding-bottom: 5%;
+  }
+  .btn-comprar {
+    background-color: rgb(54, 172, 250);
+    border-radius: 8px;
+    padding: 25px 0;
+    display: block;
+  }
+  .post_productos {
+    padding: 13px 10px;
+  }
+  .post_productos img {
+    height: 200px;
+    object-fit: contain;
+  }
+  .btn-comprar:hover {
+    background-color: rgb(54, 172, 250);
+    transform: scale(1);
+    border: 0px rgb(243, 243, 243) solid;
+  }
+  .btn-comprar:active {
+    background-color: rgb(8, 218, 255);
+  }
+  .post_productos div:hover {
+    box-shadow: rgb(255, 255, 255) 0px 1px 10px 3px;
+  }
+  .veterinario {
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: 20px 0px;
+  }
+  .filters {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-around !important;
+  }
+  .filters span {
+    padding: 0;
+  }
 }
 
-#carritoFinal{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+#carritoFinal {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
-#cartPage{
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+#cartPage {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
-#cartPage h1{
-    font-weight: bold;
-}
-
-#volver{
-    font-size: 25px;
-}
-#volver p{
-    display: inline;
-    border-radius: 10px;
-    background-color: rgb(192, 191, 191);
-    padding:0 10px;
-}
-#volver p:hover{
-    border-radius: 10px;
-    background-color: rgb(192, 191, 191);
-    padding:0 1% ;
-    cursor: pointer;
-}
-.veterinario{
-    min-height: 190px;
-    background-image:url('https://images.unsplash.com/photo-1577175889968-f551f5944abd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: 0 -90px ;
-    text-align: right;
-    font-family: 'Rubik', sans-serif; 
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    
+#cartPage h1 {
+  font-weight: bold;
 }
 
-.bannerVet{
-    background-color: rgba(4, 4, 4, 0.519);
-    display: inline-block;
-    padding:2% 1% 2% 1%;
-    margin-top: 6%;
+#volver {
+  font-size: 25px;
 }
-.bannerVet a{
-    text-decoration: none;
-    color: rgb(254, 232, 109);
+#volver p {
+  display: inline;
+  border-radius: 10px;
+  background-color: rgb(192, 191, 191);
+  padding: 0 10px;
+}
+#volver p:hover {
+  border-radius: 10px;
+  background-color: rgb(192, 191, 191);
+  padding: 0 1%;
+  cursor: pointer;
+}
+.veterinario {
+  min-height: 190px;
+  background-image: url("https://images.unsplash.com/photo-1577175889968-f551f5944abd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -90px;
+  text-align: right;
+  font-family: "Rubik", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-#turnoVet{
-    background-color: var(--btn-primary);
-    text-decoration: none;
-    border-radius: 20px;
-    padding: 10px;
-    color: #fff;
+.bannerVet {
+  background-color: rgba(4, 4, 4, 0.519);
+  display: inline-block;
+  padding: 2% 1% 2% 1%;
+  margin-top: 6%;
 }
-.btn__Comprar{
-    padding: 1% 0px;
-    text-align: right;
+.bannerVet a {
+  text-decoration: none;
+  color: rgb(254, 232, 109);
 }
-.btn__Comprar span{
-    background-color:var(--btn-primary) ;
-    border-radius: 6px;
-    padding: 10px 10px;
+
+#turnoVet {
+  background-color: var(--btn-primary);
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px;
+  color: #fff;
 }
-.btn__Comprar a:hover{
-    color: #fff;
+.btn__Comprar {
+  padding: 1% 0px;
+  text-align: right;
 }
-.btn__Comprar a{
-    color: rgb(5, 5, 5);
-    text-decoration: none;
+.btn__Comprar span {
+  background-color: var(--btn-primary);
+  border-radius: 6px;
+  padding: 10px 10px;
 }
-.metodos h4{
-    font-weight: bold;
+.btn__Comprar a:hover {
+  color: #fff;
 }
-.totalStyle{
-    font-family: 'Lato', sans-serif;
-    font-weight:bolder;
-    color: red;
-    font-size: 20px;
+.btn__Comprar a {
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+}
+.metodos h4 {
+  font-weight: bold;
+}
+.totalStyle {
+  font-family: "Lato", sans-serif;
+  font-weight: bolder;
+  color: red;
+  font-size: 20px;
 }
