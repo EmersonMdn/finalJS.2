@@ -26,19 +26,19 @@ let carrito = [];
 
 let todoProducts = comidas.concat(juguetes);
 
-for (const comida of todoProducts) {
+for (const producto of todoProducts) {
     let post = document.createElement('div');
     post.className = 'col-12 col-sm-6 col-md-4 col-lg-3 post_productos'
-    post.innerHTML =`<div id='${comida.id}'>  
-                        <img src="${comida.imagen}" alt=""> 
-                        <h6>${comida.nombre}</h6>
-                        <p id='boton${comida.id}' class='btn-comprar'>COMPRAR $${comida.precio}</p>
+    post.innerHTML =`<div id='${producto.id}'>  
+                        <img src="${producto.imagen}" alt=""> 
+                        <h6>${producto.nombre}</h6>
+                        <p id='btn${producto.id}' class='btn-comprar'>COMPRAR $${producto.precio}</p>
                     </div>`;
                     
     productos.append(post);
-    let boton = document.getElementById(`boton${comida.id}`);
+    let boton = document.getElementById(`btn${producto.id}`);
     
-    boton.addEventListener('click', ()=> addCart(comida.id));
+    boton.addEventListener('click', ()=> addCart(producto.id));
 }
 
 function obtenerPrecioTotal(array) {
@@ -53,7 +53,7 @@ const addCart = (idProducto) => {
         carrito[index].agregarUnidad();
         carrito[index].actualizarPrecioTotal();
     } else{
-        carrito.push(new Producto(comidas[idProducto],1))
+        carrito.push(new Producto(todoProducts[idProducto],1))
     }
 
     const Toast = Swal.mixin({
@@ -72,6 +72,7 @@ const addCart = (idProducto) => {
     localStorage.setItem('cart', JSON.stringify(carrito));
 
     imprimirCarro(carrito);
+    console.log(carrito)
 }
 
 const imprimirCarro = (array) =>{
@@ -186,14 +187,27 @@ const imprimirTodo = (array) => {
 
     let precioFinal = obtenerPrecioTotal(carrito);
     let total = document.createElement('tr');
-    total.innerHTML = `
-                        <td>TOTAL A PAGAR</td>
-                        <td>$ ${precioFinal}</td>`
-    
-                        listaTable.append(total);
+    total.className = 'totalStyle'
+    total.innerHTML = ` <td>TOTAL A PAGAR</td>
+                        <td>$ ${precioFinal}</td>`;
+                       
+    listaTable.append(total);
+
+    let btnComprar = document.createElement('div');
+    btnComprar.className = 'btn__Comprar';
+    btnComprar.innerHTML = `<span id='confirmCompra'> <a href='#'>CONFIRMAR COMPRA</a> </span>`;
+    lista.append(btnComprar);
 }
 
 document.getElementById('volver').onclick = () =>{
     document.getElementById('mainPage').className = 'container-fluid mainPage';
     document.getElementById('cartPage').className = 'oculto'
 }
+
+let onlyGatos = [];
+onlyGatos = todoProducts.filter(elemento => elemento.animal === 'gato')
+
+let onlyPerros = [];
+onlyPerros = todoProducts.filter(elemento => elemento.animal === 'perro')
+
+console.table(todoProducts);

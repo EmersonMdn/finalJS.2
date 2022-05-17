@@ -44,7 +44,6 @@ font-family: 'Rubik', sans-serif; */
 }
 
 .productos{
-    padding-top: 12px;
     padding-bottom: 30px;
     text-align: center;
 }
@@ -103,7 +102,6 @@ font-family: 'Rubik', sans-serif; */
 .navBurger{
     background-color: rgb(227, 226, 226);
     border-top: 1px rgba(0, 0, 0, 0.273) solid;
-    padding-top: 7%;
 }
 .navBurger-in{
     background-color: rgb(227, 226, 226);
@@ -163,6 +161,9 @@ font-family: 'Rubik', sans-serif; */
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+#cartPage h1{
+    font-weight: bold;
+}
 
 #volver{
     font-size: 25px;
@@ -209,4 +210,29 @@ font-family: 'Rubik', sans-serif; */
     border-radius: 20px;
     padding: 10px;
     color: #fff;
+}
+.btn__Comprar{
+    padding: 1% 0px;
+    text-align: right;
+}
+.btn__Comprar span{
+    background-color:var(--btn-primary) ;
+    border-radius: 6px;
+    padding: 10px 10px;
+}
+.btn__Comprar a:hover{
+    color: #fff;
+}
+.btn__Comprar a{
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+}
+.metodos h4{
+    font-weight: bold;
+}
+.totalStyle{
+    font-family: 'Lato', sans-serif;
+    font-weight:bolder;
+    color: red;
+    font-size: 20px;
 }
