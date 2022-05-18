@@ -29,8 +29,8 @@
                 <div class="veterinario" id="veterinario">
                     <div class="bannerVet">
                         <h4>Necesitas una consulta con un veterinario?</h4>
-                        <p>Saca turno para una consulta <a href="#">acá</a></p>
-                        <a id="turnoVet" href="#">Saca un turno</a>
+                        <p>Saca turno para una consulta <a href="#contactosFT">acá</a></p>
+                        <a id="turnoVet" href="#contactosFT">Saca un turno</a>
                     </div>
                 </div>
 
@@ -45,11 +45,13 @@
                                 <li class="nav-item" id="items-perros">Productos para perros</li>
                             </ul>
                             <form class="d-flex">
-                                <input id="buscarProductoValue" class="form-control me-2" type="search"
-                                    placeholder="Buscar en la tienda" aria-label="Search">
+                                <!-- <input id="buscarProductoValue" class="form-control me-2" type="search"
+                                    placeholder="Buscar en la tienda" aria-label="Search"> -->
+                                <input type="text" class="form-control me-2" id="buscarProductoValue" placeholder="Buscar producto" aria-label="Search">
                                 <button id="buscarProductoBtn" class="btn btn-outline-dark"
-                                    type="submit">Buscar</button>
+                                    type="button">Buscar</button>
                             </form>
+                            <div id="mensajeError"></div>
                         </div>
                     </div>
                     <nav class="navbar navbar-light navBurger">
@@ -70,6 +72,8 @@
             <div class="col-md-3 lateral">
                 <div id="lista-carrito" class="oculto"></div>
             </div>
+
+            <div id="apiFetch" class="col-md-12"></div>
         </div>
     </div>
     <div class="container oculto" id="cartPage">
@@ -91,9 +95,14 @@
                 <li>Efectivo (RapiPago, Pago Facil, etc...)</li>
             </ul>
         </div>
-
-
+        <div class="container contactosFT">
+            <h4>Contactos</h4> <hr>
+            <h5>Podes consultar turnos y más a travez de nuestros contactos</h5>
+            <div id="contactosFT" class="row"></div>
+        </div>
+        
     </div>
+    
 
     <!-- INCORPORANDO BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

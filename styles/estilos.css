@@ -254,3 +254,19 @@ font-family: 'Rubik', sans-serif; */
   color: red;
   font-size: 20px;
 }
+#mensajeError{
+  color: red;
+  font-family: 'Rubik', sans-serif; 
+  font-size: 22px;
+  padding-top: 20px;
+}
+.contactosFT{
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+}
+.contactosFT h4{
+  font-weight: bolder;
+}
+.contactosFT span{
+  padding: 10px 0;
+}

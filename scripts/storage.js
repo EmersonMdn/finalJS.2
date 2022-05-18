@@ -10,3 +10,23 @@ const verificarLS = () => {
         imprimirCarro(carrito);
     }
 }
+
+
+const nombres = async() => {
+    let nombre = await fetch('https://jsonplaceholder.typicode.com/users')
+	.then(response => response.json())
+	.then(data => {
+    
+        let contenedor = document.getElementById('contactosFT');
+
+        data.forEach(element => {
+            let p = document.createElement('span');
+            p.innerHTML = `${element.name} Mail: ${element.email}`;
+
+        contenedor.append(p) ; 
+        });
+    })
+	.catch(err => console.error(err));
+}
+nombres()
+

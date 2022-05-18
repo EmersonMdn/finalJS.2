@@ -115,4 +115,10 @@ const imprimirTodo = () => {
     btnComprar.className = 'btn__Comprar';
     btnComprar.innerHTML = `<span id='confirmCompra'> <a href='#'>CONFIRMAR COMPRA</a> </span>`;
     lista.append(btnComprar);
+
+    let botonCompra = document.getElementById('confirmCompra');
+
+    botonCompra.onclick = () => {
+        confirmarCompra();
+    }
 }

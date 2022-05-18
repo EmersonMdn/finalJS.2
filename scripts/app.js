@@ -91,20 +91,57 @@ const procederCompra = () => {
 
     imprimirTodo(carrito);
 }
+function filtrarBusqueda(){
+    let valor = document.getElementById('buscarProductoValue').value;
+    let buscar = [];
+    let navBurgers = document.getElementById('mensajeError');
+    navBurgers.innerHTML = '';
+    buscar = todoProducts.filter((elemento) => elemento.nombre.toLowerCase().includes(valor));
+
+    if (buscar < 1) {
+        let error = document.createElement('p');
+        error.innerHTML = 'No se encontro ningun producto con ese nombre';
+
+        navBurgers.append(error)
+    }
+    
+    mostrarProductos(buscar);
+}
+const confirmarCompra = () =>{
+    Swal.fire(
+        'Pedido confirmado!',
+        'En breve nos contactaremos con usted!',
+        'success'
+      )
+    document.getElementById('bodyTablet').innerHTML = '';
+    document.getElementById('lista-carrito').innerHTML = '';
+    carrito = [];
+    localStorage.removeItem('cartEnStorage')
+}
+
 
 document.getElementById('volver').onclick = () => {
     document.getElementById('mainPage').className = 'container-fluid mainPage';
     document.getElementById('cartPage').className = 'oculto'
 }
-btnGatos.onclick = () => {
-    mostrarProductos(onlyGatos);
-}
-btnPerros.onclick = () => {
-    mostrarProductos(onlyPerros);
-}
-btnTodo.onclick = () => {
-    mostrarProductos(todoProducts);
-}
 
+turno.addEventListener('click', async()=>{
+    const { value: email } = await Swal.fire({
+        title: 'Ingrese su correo',
+        input: 'email',
+        inputLabel: 'Nos comunicaremos por esa vía',
+        inputPlaceholder: 'Ingrese su correo'
+      })
+      
+      if (email) {
+        Swal.fire(`Nos comunicaremos con usted: ${email}`)
+      }
+} )
+
+btnGatos.onclick = () => {mostrarProductos(onlyGatos);}
+btnPerros.onclick = () => {mostrarProductos(onlyPerros);}
+btnTodo.onclick = () => {mostrarProductos(todoProducts);}
+buscarProducto.onclick= () =>{filtrarBusqueda();}
+valorInput.addEventListener('keyup', ()=>{filtrarBusqueda();})
 
 iniciar();
